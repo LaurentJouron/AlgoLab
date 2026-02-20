@@ -1,4 +1,4 @@
-# ⚡ AlgoLab — Visualisateur d'Algorithmes
+# ⚡ Graphix — Visualisateur d'Algorithmes
 
 Application de démonstration professionnelle des algorithmes classiques, construite avec **Python** et **Streamlit**.
 
