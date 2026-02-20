@@ -154,6 +154,7 @@ h1, h2, h3 {
 .algo-card.cyan::before   { background: var(--accent2); }
 .algo-card.amber::before  { background: var(--accent3); }
 .algo-card.green::before  { background: var(--accent4); }
+.algo-card.red::before    { background: #ef4444; }
 
 .algo-card:hover {
     border-color: #333350;
@@ -189,6 +190,7 @@ h1, h2, h3 {
 .tag-cyan   { background: rgba(6, 182, 212, 0.2);  color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.3); }
 .tag-amber  { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
 .tag-green  { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+.tag-red    { background: rgba(239, 68, 68, 0.2);  color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.3); }
 
 /* ── Divider ──────────────────────────────────────────────────────────────── */
 .divider {
