@@ -32,6 +32,8 @@ algo_app/
 ├── requirements.txt
 ├── utils/
 │   └── styles.py           ← CSS global partagé
+├── assets/
+│   └── style.css           ← fichier de style CSS
 └── pages/
     ├── 1_Tri.py            ← Tri à bulles, Tri fusion, Tri rapide
     ├── 2_Hanoi.py          ← Tours de Hanoï
