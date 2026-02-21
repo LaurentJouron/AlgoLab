@@ -29,11 +29,9 @@ with st.sidebar:
         "Application de démonstration d'algorithmes classiques avec visualisation interactive étape par étape."
     )
 
+
 # ── Hero ──────────────────────────────────────────────────────────────────────
-import base64
-
-
-def get_logo_b64():
+def _get_logo_b64():
     logo_path = os.path.join(os.path.dirname(__file__), "assets", "logo.png")
     if os.path.exists(logo_path):
         with open(logo_path, "rb") as f:
@@ -41,7 +39,7 @@ def get_logo_b64():
     return None
 
 
-logo_b64 = get_logo_b64()
+logo_b64 = _get_logo_b64()
 if logo_b64:
     st.markdown(
         f"""
@@ -65,6 +63,7 @@ else:
     st.markdown(
         '<div class="hero-title">Graphix</div>', unsafe_allow_html=True
     )
+
 
 st.markdown(
     '<div class="hero-sub">Explorez et visualisez les algorithmes fondamentaux de l\'informatique en temps réel. Chaque étape expliquée, chaque décision tracée.</div>',

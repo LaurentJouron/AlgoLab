@@ -232,3 +232,32 @@ h1, h2, h3 {
 .js-plotly-plot .plotly .updatemenu-button:hover tspan {
     fill: #000000 !important;
 }
+
+/* ── Masquer la navigation automatique de Streamlit ─────────────────────── */
+/* Streamlit génère sa propre liste de pages — on cache celle-ci pour
+   ne garder que la sidebar_nav() custom */
+[data-testid="stSidebarNav"] {
+    display: none !important;
+}
+
+/* ── Titre dans la sidebar ───────────────────────────────────────────────── */
+.sidebar-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #e2e8f0;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+/* Réduire le padding top natif de Streamlit dans la sidebar */
+[data-testid="stSidebar"] > div:first-child {
+    padding-top: 0.25rem !important;
+}
+
+/* Sur mobile : le contenu principal n'est pas décalé par la sidebar */
+@media (max-width: 768px) {
+    [data-testid="stSidebar"] {
+        min-width: 0 !important;
+    }
+}
