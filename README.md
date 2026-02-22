@@ -5,7 +5,7 @@ Application de démonstration professionnelle des algorithmes classiques, constr
 ## 🚀 Installation & Lancement
 
 ### 1. Prérequis
-- Python 3.9+
+- Python 3.12+
 - pip
 
 ### 2. Installer les dépendances

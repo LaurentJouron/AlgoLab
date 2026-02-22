@@ -76,12 +76,12 @@ st.markdown("<br>", unsafe_allow_html=True)
 c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.markdown(
-        '<div class="stat-box"><div class="stat-num">12</div><div class="stat-label">Pages</div></div>',
+        '<div class="stat-box"><div class="stat-num">19</div><div class="stat-label">Pages</div></div>',
         unsafe_allow_html=True,
     )
 with c2:
     st.markdown(
-        '<div class="stat-box"><div class="stat-num">20+</div><div class="stat-label">Algorithmes</div></div>',
+        '<div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Algorithmes</div></div>',
         unsafe_allow_html=True,
     )
 with c3:
@@ -281,6 +281,81 @@ with col12:
     st.page_link("pages/12_AStar.py", label="▶ Ouvrir A*")
 
 st.markdown("<hr class='divider'>", unsafe_allow_html=True)
+st.markdown("### 🆕 Nouveaux algorithmes")
+st.markdown("<br>", unsafe_allow_html=True)
+
+col_n1, col_n2 = st.columns(2)
+with col_n1:
+    st.markdown(
+        """<div class="algo-card purple"><div class="card-icon">🌲</div>
+    <div class="card-title">Heap Sort</div>
+    <div class="card-desc">Tri par tas : construction du max-heap puis extractions successives. Visualisation de l'arbre binaire en parallèle des barres.</div>
+    <span class="card-tag tag-purple">O(n log n) garanti · En place</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/14_HeapSort.py", label="▶ Ouvrir Heap Sort")
+with col_n2:
+    st.markdown(
+        """<div class="algo-card green"><div class="card-icon">🌉</div>
+    <div class="card-title">Kruskal & Prim</div>
+    <div class="card-desc">Arbre couvrant minimal : Kruskal trie les arêtes et évite les cycles (Union-Find), Prim croît depuis un nœud de départ (min-heap).</div>
+    <span class="card-tag tag-green">O(E log E) · Graphes pondérés</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/15_Kruskal.py", label="▶ Ouvrir Kruskal / Prim")
+
+col_n3, col_n4 = st.columns(2)
+with col_n3:
+    st.markdown(
+        """<div class="algo-card cyan"><div class="card-icon">🌀</div>
+    <div class="card-title">Fibonacci</div>
+    <div class="card-desc">Trois approches comparées : récursif naïf (O(2ⁿ), arbre d'appels explosif), mémoïsation (O(n), cache visible), itératif (O(n)/O(1), optimal).</div>
+    <span class="card-tag tag-cyan">Récursif · Mémoïsation · Itératif</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/16_Fibonacci.py", label="▶ Ouvrir Fibonacci")
+with col_n4:
+    st.markdown(
+        """<div class="algo-card amber"><div class="card-icon">🪣</div>
+    <div class="card-title">Counting & Radix Sort</div>
+    <div class="card-desc">Tris en O(n) sans comparaison. Counting compte les occurrences, Radix trie chiffre par chiffre via des seaux. Stables et déterministes.</div>
+    <span class="card-tag tag-amber">O(n+k) · O(d×n) · Sans comparaison</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/17_TriExternes.py", label="▶ Ouvrir Counting / Radix")
+
+col_n5, col_n6 = st.columns(2)
+with col_n5:
+    st.markdown(
+        """<div class="algo-card green"><div class="card-icon">✏️</div>
+    <div class="card-title">Distance de Levenshtein</div>
+    <div class="card-desc">Combien d'insertions, suppressions et remplacements pour transformer un mot en un autre ? Table DP complète avec reconstruction du chemin optimal.</div>
+    <span class="card-tag tag-green">O(m×n) · Programmation dynamique</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/18_Levenshtein.py", label="▶ Ouvrir Levenshtein")
+with col_n6:
+    st.markdown(
+        """<div class="algo-card red"><div class="card-icon">🎲</div>
+    <div class="card-title">Monte Carlo — Estimation de π</div>
+    <div class="card-desc">Lancer des points aléatoires dans un carré pour estimer π. La courbe de convergence montre comment la précision augmente avec le nombre de points.</div>
+    <span class="card-tag tag-red">Probabiliste · Loi des grands nombres</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/19_MonteCarlo.py", label="▶ Ouvrir Monte Carlo")
+
+col_n7, _ = st.columns(2)
+with col_n7:
+    st.markdown(
+        """<div class="algo-card cyan"><div class="card-icon">🌐</div>
+    <div class="card-title">PageRank</div>
+    <div class="card-desc">L'algorithme original de Google : les pages se transmettent leur importance via les liens. Convergence en quelques itérations, taille des nœuds ∝ score.</div>
+    <span class="card-tag tag-cyan">Graphes · Probabilités · Convergence</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/20_PageRank.py", label="▶ Ouvrir PageRank")
+
+st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 st.markdown("### 🛠️ Outils")
 st.markdown("<br>", unsafe_allow_html=True)
 col13, col14 = st.columns(2)
@@ -314,7 +389,15 @@ with col14:
     st.page_link("pages/13_Quiz.py", label="▶ Ouvrir Quiz")
 
 st.markdown("<hr class='divider'>", unsafe_allow_html=True)
-st.markdown(
-    "<p style=\"color:#64748b;font-size:0.8rem;font-family:'Space Mono',monospace;text-align:center;\">Graphix · Construit avec Python & Streamlit</p>",
-    unsafe_allow_html=True,
-)
+if logo_b64:
+    st.markdown(
+        f"""
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.6rem;padding:0.5rem 0;">
+            <img src="data:image/png;base64,{logo_b64}"
+                 style="width:20px;height:20px;border-radius:50%;
+                        box-shadow:0 0 10px rgba(191,30,46,0.4);flex-shrink:0;" />
+            <span style="color:#64748b;font-size:0.8rem;font-family:'Space Mono',monospace;background:linear-gradient(135deg,#e2e8f0 0%,#7c3aed 50%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Graphix par Laurent Jouron</span>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
