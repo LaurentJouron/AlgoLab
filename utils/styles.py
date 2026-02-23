@@ -26,13 +26,15 @@ def sidebar_nav():
         if logo_b64:
             st.markdown(
                 f"""
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:4px 0 12px 0;">
-                <img src="data:image/png;base64,{logo_b64}"
-                     style="width:36px;height:36px;border-radius:50%;
-                            box-shadow:0 0 10px rba(191,30,46,0.5);flex-shrink:0;" />
-                <span class="sidebar-title" style="color:#64748b;font-size:3rem;background:linear-gradient(135deg,#e2e8f0 0%,#7c3aed 50%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Graphix</span>
+            <div style="padding:4px 0 12px 0;">
+                <div style="display:flex;align-items:center;gap:0.6rem;">
+                    <img src="data:image/png;base64,{logo_b64}"
+                         style="width:36px;height:36px;border-radius:50%;
+                                box-shadow:0 0 10px rgba(191,30,46,0.5);flex-shrink:0;" />
+                    <span style="font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,#e2e8f0 0%,#7c3aed 50%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Graphix</span>
+                </div>
+                <div style="color:#64748b;font-size:0.72rem;font-family:'Space Mono',monospace;margin-top:4px;padding-left:2px;">Par Laurent Jouron</div>
             </div>
-                <span class="sidebar-title">Par Laurent Jouron</span>
             """,
                 unsafe_allow_html=True,
             )
@@ -62,8 +64,8 @@ def sidebar_nav():
         st.page_link("pages/10_Huffman.py", label="📦 Huffman")
         st.page_link("pages/11_Chiffrement.py", label="🔐 Chiffrement")
         st.page_link("pages/12_AStar.py", label="⭐ A*")
-        st.page_link("pages/14_HeapSort.py", label="🌲 Heap sort")
-        st.page_link("pages/15_Kruskal.py", label="🌉 Kruskal")
+        st.page_link("pages/14_HeapSort.py", label="🌲 Heap Sort")
+        st.page_link("pages/15_Kruskal.py", label="🌉 Kruskal & Prim")
         st.page_link("pages/16_Fibonacci.py", label="🌀 Fibonacci")
         st.page_link("pages/17_TriExternes.py", label="🪣 Tri Externes")
         st.page_link(
@@ -73,12 +75,14 @@ def sidebar_nav():
         st.page_link("pages/20_PageRank.py", label="🌐 PageRank")
         st.page_link("pages/21_Dijkstra_Carte.py", label="🗺️ Dijkstra Carte")
         st.page_link("pages/22_FloodFill.py", label="🌊 Flood Fill")
-        st.page_link("pages/23_Genetique.py", label="🧬 Génétique")
+        st.page_link("pages/23_Genetique.py", label="🧬 Algorithme Génétique")
         st.page_link(
-            "pages/24_Mandelbrot.py", label="🔭 Fractale de Mandelbro"
+            "pages/24_Mandelbrot.py", label="🌀 Fractale de Mandelbrot"
         )
         st.page_link("pages/25_Lissajous.py", label="🐢 Lissajous")
-        st.page_link("pages/26_Eratosthene.py", label="🔢 Ératosthène")
+        st.page_link(
+            "pages/26_Eratosthene.py", label="🔢 Crible d'Ératosthène"
+        )
         st.page_link("pages/27_PileFile.py", label="📚 Pile & File")
         st.page_link("pages/28_ArbreRougeNoir.py", label="🔴 Arbre Rouge-Noir")
         st.page_link("pages/29_TableHachage.py", label="#️⃣ Table de Hachage")
