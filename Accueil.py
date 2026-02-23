@@ -48,7 +48,7 @@ if logo_b64:
              style="width:72px;height:72px;border-radius:50%;
                     box-shadow:0 0 24px rgba(191,30,46,0.5);flex-shrink:0;" />
         <div>
-            <div class="hero-badge" style="margin-bottom:6px;">DÉMO PROFESSIONNELLE · v2.0</div>
+            <div class="hero-badge" style="margin-bottom:6px;">DÉMO PROFESSIONNELLE · v4.0</div>
             <div class="hero-title" style="margin:0;">Graphix</div>
         </div>
     </div>
@@ -57,7 +57,7 @@ if logo_b64:
     )
 else:
     st.markdown(
-        '<div class="hero-badge">DÉMO PROFESSIONNELLE · v2.0</div>',
+        '<div class="hero-badge">DÉMO PROFESSIONNELLE · v4.0</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
@@ -76,12 +76,12 @@ st.markdown("<br>", unsafe_allow_html=True)
 c1, c2, c3, c4 = st.columns(4)
 with c1:
     st.markdown(
-        '<div class="stat-box"><div class="stat-num">19</div><div class="stat-label">Pages</div></div>',
+        '<div class="stat-box"><div class="stat-num">28</div><div class="stat-label">Pages</div></div>',
         unsafe_allow_html=True,
     )
 with c2:
     st.markdown(
-        '<div class="stat-box"><div class="stat-num">30+</div><div class="stat-label">Algorithmes</div></div>',
+        '<div class="stat-box"><div class="stat-num">50+</div><div class="stat-label">Algorithmes</div></div>',
         unsafe_allow_html=True,
     )
 with c3:
@@ -281,7 +281,7 @@ with col12:
     st.page_link("pages/12_AStar.py", label="▶ Ouvrir A*")
 
 st.markdown("<hr class='divider'>", unsafe_allow_html=True)
-st.markdown("### 🆕 Nouveaux algorithmes")
+st.markdown("### 🆕 Nouveaux algorithmes V2.0")
 st.markdown("<br>", unsafe_allow_html=True)
 
 col_n1, col_n2 = st.columns(2)
@@ -354,6 +354,105 @@ with col_n7:
         unsafe_allow_html=True,
     )
     st.page_link("pages/20_PageRank.py", label="▶ Ouvrir PageRank")
+
+st.markdown("<hr class='divider'>", unsafe_allow_html=True)
+st.markdown("### 🚀 Nouveaux — v4.0")
+st.markdown("<br>", unsafe_allow_html=True)
+
+col_v4a, col_v4b = st.columns(2)
+with col_v4a:
+    st.markdown(
+        """<div class="algo-card green"><div class="card-icon">🗺️</div>
+    <div class="card-title">Dijkstra sur carte</div>
+    <div class="card-desc">L'algorithme de Dijkstra appliqué au réseau routier français. Villes réelles, distances kilométriques, front d'exploration visible en temps réel sur la carte.</div>
+    <span class="card-tag tag-green">O((V+E) log V) · Carte réelle</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/21_Dijkstra_Carte.py", label="▶ Ouvrir Dijkstra Carte")
+with col_v4b:
+    st.markdown(
+        """<div class="algo-card cyan"><div class="card-icon">🌊</div>
+    <div class="card-title">Flood Fill</div>
+    <div class="card-desc">L'outil "seau" de Paint : propagation BFS depuis une cellule vers toutes ses voisines de même couleur. Application : compter les régions connexes (îles).</div>
+    <span class="card-tag tag-cyan">O(n×m) · BFS · Îles</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/22_FloodFill.py", label="▶ Ouvrir Flood Fill")
+
+col_v4c, col_v4d = st.columns(2)
+with col_v4c:
+    st.markdown(
+        """<div class="algo-card green"><div class="card-icon">🧬</div>
+    <div class="card-title">Algorithme Génétique</div>
+    <div class="card-desc">Une population évolue vers le maximum d'une fonction par sélection, croisement et mutation. Inspiré de Darwin. Courbe de convergence génération par génération.</div>
+    <span class="card-tag tag-green">O(G×P) · Évolutionnaire</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link(
+        "pages/23_Genetique.py", label="▶ Ouvrir Algorithme Génétique"
+    )
+with col_v4d:
+    st.markdown(
+        """<div class="algo-card purple"><div class="card-icon">🔭</div>
+    <div class="card-title">Fractale de Mandelbrot</div>
+    <div class="card-desc">L'ensemble de Mandelbrot calculé pixel par pixel. 6 zones prédéfinies pour zoomer dans des structures de complexité infinie. Palettes de couleurs interchangeables.</div>
+    <span class="card-tag tag-purple">Fractale · Zoom · Complexe</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/24_Mandelbrot.py", label="▶ Ouvrir Mandelbrot")
+
+col_v4e, col_v4f = st.columns(2)
+with col_v4e:
+    st.markdown(
+        """<div class="algo-card purple"><div class="card-icon">🐢</div>
+    <div class="card-title">Lissajous & Spirographe</div>
+    <div class="card-desc">Courbes paramétriques x=sin(at+δ), y=sin(bt). Slider en temps réel : le rapport a/b change radicalement la forme. Épicycloïdes (spirographe) dans l'onglet 2.</div>
+    <span class="card-tag tag-purple">Paramétrique · Interactif</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/25_Lissajous.py", label="▶ Ouvrir Lissajous")
+with col_v4f:
+    st.markdown(
+        """<div class="algo-card green"><div class="card-icon">🔢</div>
+    <div class="card-title">Crible d'Ératosthène</div>
+    <div class="card-desc">Inventé en 240 av. J.-C. Les multiples se barrent en cascade : vert = premier, rouge = éliminé. Distribution des écarts entre premiers en bonus.</div>
+    <span class="card-tag tag-green">O(n log log n) · Premiers</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/26_Eratosthene.py", label="▶ Ouvrir Ératosthène")
+
+col_v4g, col_v4h = st.columns(2)
+with col_v4g:
+    st.markdown(
+        """<div class="algo-card cyan"><div class="card-icon">📚</div>
+    <div class="card-title">Pile & File</div>
+    <div class="card-desc">Push/Pop/Peek animés sur la pile LIFO, Enqueue/Dequeue sur la file FIFO. Boutons interactifs en temps réel + onglet des applications concrètes (undo, BFS, serveurs…).</div>
+    <span class="card-tag tag-cyan">O(1) · LIFO · FIFO</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/27_PileFile.py", label="▶ Ouvrir Pile & File")
+with col_v4h:
+    st.markdown(
+        """<div class="algo-card red"><div class="card-icon">🔴</div>
+    <div class="card-title">Arbre Rouge-Noir</div>
+    <div class="card-desc">BST auto-équilibrant. Chaque insertion peut déclencher rotations et recolorations en cascade. Compteur d'opérations en temps réel. Utilisé dans std::map et TreeMap.</div>
+    <span class="card-tag tag-red">O(log n) · Auto-équilibrant</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link(
+        "pages/28_ArbreRougeNoir.py", label="▶ Ouvrir Arbre Rouge-Noir"
+    )
+
+col_v4i, _ = st.columns(2)
+with col_v4i:
+    st.markdown(
+        """<div class="algo-card amber"><div class="card-icon">#️⃣</div>
+    <div class="card-title">Table de Hachage</div>
+    <div class="card-desc">Visualise les collisions en temps réel : chaînage (listes liées) vs sondage linéaire (clustering). Comparaison de 3 fonctions de hachage sur le même jeu de données.</div>
+    <span class="card-tag tag-amber">O(1) amorti · Collisions</span></div>""",
+        unsafe_allow_html=True,
+    )
+    st.page_link("pages/29_TableHachage.py", label="▶ Ouvrir Table de Hachage")
 
 st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 st.markdown("### 🛠️ Outils")

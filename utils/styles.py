@@ -71,6 +71,17 @@ def sidebar_nav():
         )
         st.page_link("pages/19_MonteCarlo.py", label="🎲 Monte Carlo")
         st.page_link("pages/20_PageRank.py", label="🌐 PageRank")
+        st.page_link("pages/21_Dijkstra_Carte.py", label="🗺️ Dijkstra Carte")
+        st.page_link("pages/22_FloodFill.py", label="🌊 Flood Fill")
+        st.page_link("pages/23_Genetique.py", label="🧬 Génétique")
+        st.page_link(
+            "pages/24_Mandelbrot.py", label="🔭 Fractale de Mandelbro"
+        )
+        st.page_link("pages/25_Lissajous.py", label="🐢 Lissajous")
+        st.page_link("pages/26_Eratosthene.py", label="🔢 Ératosthène")
+        st.page_link("pages/27_PileFile.py", label="📚 Pile & File")
+        st.page_link("pages/28_ArbreRougeNoir.py", label="🔴 Arbre Rouge-Noir")
+        st.page_link("pages/29_TableHachage.py", label="#️⃣ Table de Hachage")
         st.markdown(
             '<div style="color:#475569;font-size:0.7rem;font-family:Space Mono,monospace;padding:6px 0 2px 0;text-transform:uppercase;letter-spacing:1px;">── Outils ──</div>',
             unsafe_allow_html=True,
